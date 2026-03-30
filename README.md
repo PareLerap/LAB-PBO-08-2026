@@ -1,62 +1,89 @@
 # LAB-PBO-08-2026 Repository
 
-Selamat datang di repositori LAB-PBO-10-2024! Repositori ini adalah tempat kerja tim untuk mata kuliah Pemrograman Berorientasi Objek semester ini. Berikut adalah panduan singkat untuk berkontribusi ke repositori ini.
+Selamat datang di repositori LAB-PBO-08-2026! Repositori ini adalah tempat pengumpulan tugas untuk mata kuliah Pemrograman Berorientasi Objek semester ini. Berikut adalah panduan lengkap untuk berkontribusi dan mengumpulkan tugasmu.
 
-## Tata Cara Pengumpulan (Commit)
+---
 
-Kami ingin memastikan bahwa tata cara pengumpulan kode (commit) ke repositori ini mudah dipahami, terutama untuk pemula. Berikut langkah-langkahnya:
+## BAGIAN 1: Pembuatan Branch dan Pengumpulan Tugas Pertama
 
-1. **Fork Repositori Ini**: Di kanan atas halaman repositori, klik tombol "Fork" untuk membuat salinan repositori ini ke akun GitHub pribadimu.
+Langkah ini **HANYA** dilakukan saat kamu mengumpulkan tugas untuk pertama kalinya.
 
-2. **Kloning Repositori**: Setelah kamu memiliki salinan repositori di akunmu, klik tombol "Code" dan pilih metode untuk mengunduh repositori. Salin URL yang diberikan.
+1. **Fork Repositori**: Di kanan atas halaman repositori ini, klik tombol "Fork" untuk membuat salinan repositori ke akun GitHub pribadimu.
 
-3. **Buka Terminal**: Buka terminal atau command prompt di komputermu.
+2. **Salin URL**: Di halaman repositori hasil *fork* di akunmu, klik tombol "Code" (warna hijau) dan salin URL HTTPS yang diberikan.
 
-4. **Kloning Repositori**: Ketik perintah berikut untuk mengkloning repositori ke komputermu. Ganti `<repository-url>` dengan URL yang telah kamu salin.
+3. **Kloning Repositori**: Buka Terminal / Git Bash / Command Prompt di komputermu, lalu ketik perintah berikut (ganti `<url-repositori-hasil-fork>` dengan URL yang kamu salin):
 
-```bash
-  git clone <url-repositori-hasil-fork>
-```
+~~~bash
+git clone <url-repositori-hasil-fork>
+~~~
 
-5. **Buat Cabang (Branch) Baru**: Masuk ke direktori repositori yang telah di-kloning. Lalu buat cabang sesuai nim masing-masing.
+4. **Masuk ke Repositori & Buat Branch**: Masuk ke folder utama, lalu buat cabang (*branch*) baru khusus untukmu. Gunakan format NIM masing-masing.
 
-```bash
-cd LAB-PBO-10-2024
-git checkout -b H0712310-- # Sesuaikan dengan NIM masing-masing
-```
+~~~bash
+cd LAB-PBO-08-2026
+git checkout -b H0712510-- # Ganti dengan NIM masing-masing (Ingat pakai -b)
+~~~
 
-6. **Masuk ke Folder**: Masuk ke directory/folder sesuai NIM.
+5. **Buat Folder Tugas (Sangat Penting)**: Buat folder fisik baru dengan nama NIM-mu agar kodemu tidak tercampur dengan praktikan lain, lalu masuk ke folder tersebut.
 
-```bash
-cd H0712310-- # Sesuaikan dengan NIM masing-masing
-```
+~~~bash
+mkdir H0712510-- # Membuat folder NIM
+cd H0712510--    # Masuk ke folder NIM
+~~~
 
-7. **Lakukan Perubahan**: Mulai mengedit atau menambahkan berkas (folder maupun file Python) sesuai dengan instruksi tugas yang diberikan.
+6. **Lakukan Perubahan**: Mulai buat, edit, atau tambahkan berkas (file Java) ke dalam folder NIM-mu sesuai dengan instruksi tugas yang diberikan.
 
-8. **Tambahkan File Tugas**: Setelah selesai melakukan perubahan pada kode, tambahkan file tugas tersebut lalu.
+7. **Simpan dan Kirim (Commit & Push)**:
 
-```bash
+~~~bash
 git add .
-```
+git commit -m "Kumpul Tugas 1: Dasar Java"
+git push -u origin H0712510-- # Sesuaikan NIM
+~~~
 
-9. **Commit Perubahan**: Setelah semua tugas sudah ditambah, commit dengan pesan yang deskriptif.
+8. **Buka Pull Request (PR)**: Kembali ke GitHub, masuk ke repositori *fork* milikmu, klik tombol **"Compare & pull request"**, lalu klik **"Create pull request"**.
 
-```bash
-git commit -m "Kumpul Tugas 2 (Conditional Statement)"  # Sesuaikan pesan dengan tugas yang kamu kumpulkan
-```
-Note: Untuk cek status file apakah sudah ditambahkan maupun dikomit, bisa dilakukan dengan `git status`
+---
 
-10. **Push ke GitHub**: Dorong (push) cabang baru yang telah kamu buat ke repositori GitHub.
+## BAGIAN 2: Pengumpulan Tugas Minggu Berikutnya (Tugas 2, 3, dst.)
 
-```bash
-git push -u origin H0712310-- # Sesuaikan dengan NIM masing-masing
-```
+Mulai minggu kedua dan seterusnya, langkahnya jauh lebih singkat. Kamu **TIDAK PERLU** melakukan fork, clone, atau membuat *branch* baru lagi.
 
-11. **Buka Pull Request (PR)**: Di halaman repositori di akunmu, akan ada pemberitahuan untuk melakukan Pull Request. Klik tautan tersebut dan isi informasi yang diperlukan. Tim kami akan meninjau perubahanmu.
+1. **Buka Terminal**: Buka terminal dan pastikan kamu sudah berada di dalam folder `LAB-PBO-08-2026` di komputermu.
 
-## Tips Tambahan
+2. **Pastikan Berada di Branch NIM**: Pindah ke *branch* NIM-mu. *(Catatan: Gunakan checkout biasa, **JANGAN** gunakan `-b` lagi karena branch-nya sudah ada).*
 
-Pastikan untuk memberi nama yang deskriptif pada cabang dan commit kamu.
-Selalu sinkronkan kode kamu dengan cabang utama sebelum membuat tugas baru.
-Gunakan pesan commit yang jelas agar mudah dimengerti olehmu suatu saat nanti.
-Terima kasih atas kontribusimu dalam LAB-PBO-10-2024!
+~~~bash
+git checkout H0712510-- # Ganti dengan NIM (TANPA -b)
+~~~
+
+3. **Masuk ke Folder NIM**:
+
+~~~bash
+cd H0712510--
+~~~
+
+4. **Kerjakan Tugas Baru**: Buat file atau folder baru untuk tugas minggu ini di dalam folder NIM-mu.
+
+5. **Simpan dan Kirim (Commit & Push)**:
+
+~~~bash
+git add .
+git commit -m "Kumpul Tugas 2: Conditional Statement"
+git push origin H0712510-- # Sesuaikan NIM (Tidak perlu -u lagi)
+~~~
+
+6.**Buka Pull Request (PR)**: Kembali ke GitHub, masuk ke repositori *fork* milikmu, klik tombol **"Compare & pull request"**, lalu klik **"Create pull request"**.
+
+---
+
+## Aturan Penulisan Pesan Commit
+
+Pesan *commit* harus jelas dan mendeskripsikan apa yang kamu kerjakan. 
+
+**Contoh Commit yang BAIK**
+* `Kumpul Tugas 1: Conditional Statement`
+
+---
+Terima kasih atas kerja samanya. Selamat mengoding dan semangat belajar!
